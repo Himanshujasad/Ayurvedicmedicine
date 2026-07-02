@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayurvedic Medicine</title>
+    <!-- CSS version trick browser cache ko bypass karne ke liye -->
+    <link rel="stylesheet" href="style.css?v=2.1">
+</head>
+<body class="admin-body-bg">
+
+<!-- ⚡ SECURE RUNNING NEON GLOW WRAPPER FOR PATIENT FORM -->
+<div class="admin-neon-border" style="max-width: 950px;">
+    <div class="admin-wrapper-core" style="padding: 40px 50px;">
+        <h2 style="color: #ffffff; margin-bottom: 5px;">💊 Medicine Delivery Address Entry</h2>
+        <p class="tip-text" style="background: rgba(16, 185, 129, 0.1); color: #34d399; border-left: 5px solid #10b981; margin-bottom: 35px; padding: 12px 18px; border-radius: 8px;">ℹ️ Tip: Primary Mobile No. enter karte hi details automatically fill ho jayengi.</p>
+        
+        <form id="medForm">
+            <div class="grid-form">
+                <div>
+                    <label>Mobile Number (Primary)*</label>
+                    <input type="text" id="mobile" required placeholder="Enter 10 digit number" maxlength="10" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                </div>
+                <div>
+                    <label>Alternative Mobile Number</label>
+                    <input type="text" id="altMobile" placeholder="Optional secondary number" maxlength="10" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                </div>
+                <div>
+                    <label>Full Name*</label>
+                    <input type="text" id="fullName" required placeholder="Patient full name">
+                </div>
+                <div>
+                    <label>Father's Name*</label>
+                    <input type="text" id="fatherName" required placeholder="Father / Guardian name">
+                </div>
+                <div class="full-width">
+                    <label>Delivery Address (House No, Colony, Road)*</label>
+                    <input type="text" id="address" required placeholder="Complete home address details">
+                </div>
+                <div>
+                    <label>Landmark / Near*</label>
+                    <input type="text" id="near" required placeholder="e.g. Near Water Tank">
+                </div>
+                <div>
+                    <label>Tehsil*</label>
+                    <input type="text" id="tehsil" required placeholder="Tehsil name">
+                </div>
+                <div>
+                    <label>District*</label>
+                    <input type="text" id="district" required placeholder="District name">
+                </div>
+                
+                <div class="state-container">
+                    <label>State*</label>
+                    <input type="text" id="state" required placeholder="Click to select or search state..." autocomplete="off">
+                    <div class="state-dropdown-list" id="stateDropdown">
+                        <div class="state-item">Andhra Pradesh</div><div class="state-item">Arunachal Pradesh</div><div class="state-item">Assam</div><div class="state-item">Bihar</div><div class="state-item">Chhattisgarh</div><div class="state-item">Delhi</div><div class="state-item">Goa</div><div class="state-item">Gujarat</div><div class="state-item">Haryana</div><div class="state-item">Himachal Pradesh</div><div class="state-item">Jharkhand</div><div class="state-item">Karnataka</div><div class="state-item">Kerala</div><div class="state-item">Madhya Pradesh</div><div class="state-item">Maharashtra</div><div class="state-item">Manipur</div><div class="state-item">Meghalaya</div><div class="state-item">Mizoram</div><div class="state-item">Nagaland</div><div class="state-item">Odisha</div><div class="state-item">Punjab</div><div class="state-item">Rajasthan</div><div class="state-item">Sikkim</div><div class="state-item">Tamil Nadu</div><div class="state-item">Telangana</div><div class="state-item">Tripura</div><div class="state-item">Uttar Pradesh</div><div class="state-item">Uttarakhand</div><div class="state-item">West Bengal</div>
+                    </div>
+                </div>
+
+                <div>
+                    <label>Pin Code*</label>
+                    <input type="text" id="pincode" required placeholder="6-digit pincode" maxlength="6" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                </div>
+            </div>
+            <button type="submit" id="submitBtn">Save Address & Submit</button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const stateInput = document.getElementById("state");
+        const dropdown = document.getElementById("stateDropdown");
+        const items = dropdown.getElementsByClassName("state-item");
+        stateInput.addEventListener("click", () => dropdown.style.display = "block");
+        stateInput.addEventListener("input", function() {
+            dropdown.style.display = "block";
+            const filter = stateInput.value.toUpperCase();
+            for (let i = 0; i < items.length; i++) {
+                let txtValue = items[i].textContent || items[i].innerText;
+                items[i].style.display = txtValue.toUpperCase().indexOf(filter) > -1 ? "" : "none";
+            }
+        });
+        for (let i = 0; i < items.length; i++) {
+            items[i].addEventListener("click", function() {
+                stateInput.value = this.innerText;
+                dropdown.style.display = "none";
+            });
+        }
+        document.addEventListener("click", function(e) {
+            if (e.target !== stateInput && !dropdown.contains(e.target)) dropdown.style.display = "none";
+        });
+    });
+</script>
+</body>
+</html>
