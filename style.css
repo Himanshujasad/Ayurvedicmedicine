@@ -1,0 +1,382 @@
+/* ==========================================================================
+   🌐 1. ULTIMATE CORPORATE HYBRID MEDICAL THEME FONTS
+   ========================================================================== */
+@import url('https://googleapis.com');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 15px;
+    /* Mobile safety side padding optimized */
+    overflow-x: hidden;
+}
+
+/* Dark tech canvas style layout background for both screens */
+body,
+.admin-body-bg {
+    background: radial-gradient(circle at 50% 50%, rgba(79, 70, 229, 0.05) 0%, rgba(15, 23, 42, 0.03) 100%), #090d16 !important;
+}
+
+/* ==========================================================================
+   ⚡ 2. 360° RUNNING NEON LIGHT BORDER FRAME (AUTO RESPONSIVE SCALE)
+   ========================================================================== */
+.admin-neon-border {
+    position: relative;
+    width: 100%;
+    max-width: 1150px;
+    /* Computer screen maximum standard wrap */
+    padding: 4px;
+    border-radius: 28px;
+    overflow: hidden;
+    background: rgba(17, 24, 39, 0.8);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(99, 102, 241, 0.15);
+    animation: entranceSlide 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.admin-neon-border::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(#6366f1, #10b981, #4f46e5, #6366f1);
+    animation: spinNeonLoop 5s linear infinite;
+}
+
+/* ==========================================================================
+   📦 3. CORE SECURE FORMS & TABLES BOARDS (PADDING RESPONSIVENESS)
+   ========================================================================== */
+.wrapper,
+.admin-wrapper-core {
+    position: relative;
+    width: 100%;
+    background: #0f172a !important;
+    padding: 45px 35px;
+    /* Spacious layout padding for laptops */
+    border-radius: 24px;
+    z-index: 2;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+    padding-bottom: 25px;
+}
+
+.admin-header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff !important;
+    letter-spacing: -0.5px;
+}
+
+.admin-header p {
+    font-size: 13.5px;
+    color: #94a3b8 !important;
+    margin-top: 4px;
+}
+
+/* ==========================================================================
+   📝 4. REACTIVE DESIGN FORM ELEMENTS FOR INDEX PAGE
+   ========================================================================== */
+.grid-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 Column split for desktop monitor views */
+    gap: 26px;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #94a3b8 !important;
+    text-transform: uppercase;
+}
+
+input {
+    width: 100%;
+    padding: 15px 18px;
+    border: 2px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 14px;
+    box-sizing: border-box;
+    font-size: 15px;
+    color: #ffffff !important;
+    background-color: rgba(15, 23, 42, 0.7) !important;
+    font-weight: 500;
+}
+
+input:focus {
+    border-color: #10b981 !important;
+    outline: none;
+    background-color: rgba(15, 23, 42, 0.9) !important;
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.1), 0 0 0 5px rgba(16, 185, 129, 0.15);
+    transform: translateY(-3px);
+}
+
+input::placeholder {
+    color: #4b5563 !important;
+}
+
+/* ==========================================================================
+   🔘 5. BUTTONS STYLING
+   ========================================================================== */
+#submitBtn {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: #ffffff !important;
+    border: none;
+    padding: 18px 24px;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 35px;
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.25);
+}
+
+.action-btn-refresh {
+    background: rgba(255, 255, 255, 0.08) !important;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-size: 13.5px;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+    cursor: pointer;
+}
+
+.action-btn-refresh:hover {
+    background: rgba(255, 255, 255, 0.18) !important;
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   📊 6. HIGH-VISIBILITY SECURE LOGS TABLE SYSTEM
+   ========================================================================== */
+.premium-admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.premium-admin-table th {
+    color: #94a3b8 !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 16px 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    text-align: left;
+}
+
+.premium-admin-table td {
+    padding: 18px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(30, 41, 59, 0.2);
+}
+
+.table-text,
+.table-text *,
+.premium-admin-table td * {
+    color: #ffffff !important;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.premium-admin-table tr:hover td {
+    background: rgba(30, 41, 59, 0.6) !important;
+}
+
+.print-action-btn {
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%) !important;
+    color: #ffffff !important;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.print-action-btn:hover {
+    background: linear-gradient(135deg, #818cf8 0%, #6366f1 100%) !important;
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   🔍 7. SEARCH DROPDOWN CONFIGURATION
+   ========================================================================== */
+.state-container {
+    position: relative;
+}
+
+.state-dropdown-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 240px;
+    overflow-y: auto;
+    background: #0f172a !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    z-index: 999;
+    margin-top: 8px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    padding: 6px;
+}
+
+.state-item {
+    padding: 12px 16px;
+    cursor: pointer;
+    font-size: 14.5px;
+    color: #cbd5e1 !important;
+    border-radius: 10px;
+}
+
+.state-item:hover {
+    background-color: #10b981 !important;
+    color: #ffffff !important;
+}
+
+/* ==========================================================================
+   🖨️ 8. MECHANICAL SLIP OVERRIDES (PRINT ENGINE)
+   ========================================================================== */
+#medicineSlip {
+    display: none;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #medicineSlip,
+    #medicineSlip * {
+        visibility: visible;
+    }
+
+    #medicineSlip {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        width: 100%;
+        max-width: 550px;
+        font-family: Arial, sans-serif;
+        color: #000000 !important;
+        font-size: 19px;
+        line-height: 1.6;
+        background: #ffffff;
+        box-sizing: border-box;
+    }
+
+    #medicineSlip p {
+        margin: 0 0 10px 0;
+        padding: 0;
+        color: #000000 !important;
+    }
+
+    .line-data {
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #000000 !important;
+    }
+}
+
+@keyframes spinNeonLoop {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes entranceSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ==========================================================================
+   📱 9. PURE MEDIA QUERY SHIFTER BREAKPOINTS (RESPONSIVE ENGINE)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 20px 10px;
+        /* Reduces external screen margins for phone device scales */
+    }
+
+    .wrapper,
+    .admin-wrapper-core {
+        padding: 30px 18px;
+        /* Shrinks container insides dynamically to prevent clips */
+        border-radius: 20px;
+    }
+
+    .admin-neon-border {
+        border-radius: 24px;
+    }
+
+    /* ⚡ Form Responsiveness Engine: Shifts parallel blocks into full single rows on mobile */
+    .grid-form {
+        grid-template-columns: 1fr !important;
+        gap: 18px;
+    }
+
+    .full-width {
+        grid-column: span 1;
+    }
+
+    /* Responsive adjustment hooks for Admin Panel header content items */
+    .admin-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .action-btn-refresh {
+        width: 100%;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 20px;
+        /* Prevents long heading overflow on narrow mobile screens */
+    }
+
+    /* Admin Table layout transforms into a responsive swipeable horizontal scroll layer */
+    .premium-admin-table th,
+    .premium-admin-table td {
+        padding: 12px 14px;
+        font-size: 13px;
+    }
+}
